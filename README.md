@@ -1,10 +1,10 @@
 # docker-ejbca-embedded
 This is the EJBCA container on CentOS 7.2 1511.  
-This container uses a MariaDB database.
+This container uses a MariaDB local database.
 For a container that uses (your) external database, use bsarda/ejbca.
 
 Sample usage:  
-`docker run -P -d --name pki bsarda/ejbca-embedded`  
+`docker run -p 8080:8080 -p 8442:8442 -p 8443:8443 -d --name pki bsarda/ejbca-embedded`  
 `docker logs -f pki`  
 When logs shows 'EJBCA Initialized.[...]', you should download the superadmin token  
 `docker cp pki:/superadmin.p12 ~/`  

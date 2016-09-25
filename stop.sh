@@ -19,4 +19,4 @@ done
 
 echo "Everything is properly stopped, we can exit"
 # everything is properly stopped, we can exit
-exit 0
+rm -f /opt/letitrun
